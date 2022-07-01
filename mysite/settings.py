@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-pb37y31s1zbgr+hbur#nc*3122%!s3t*npl63f3&)xd5b!l&b4
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
-ALLOWED_HOSTS = ["localhost","127.0.0.1:8000","smartbloggers.herokuapp.com"]
+DEBUG = True
+ALLOWED_HOSTS = ["localhost","127.0.0.1","smartbloggers.herokuapp.com"]
 
 
 # Application definition
@@ -93,7 +93,7 @@ DATABASES = {
         'USER':'eupodmwynxappb',
         'PASSWORD':'8b424f725cf7154b63936028b0d004bfb82f03fb68e40de8bb36398f721df7f6',
         'HOST':'ec2-44-206-11-200.compute-1.amazonaws.com',
-        'PORT':'5432'
+        'PORT':'5432',
       }
    }
 
@@ -129,7 +129,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
