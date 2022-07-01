@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+{% block title %}Smart Blogger{% endblock %}
+{% block content %}
+{% load static %}
+<div class="main-body" style="display: block;">
+  {% for post in posts %}
+
+  <div class="card" style="margin-top: 38px;width: 80%;height: 300px;position: relative;left:120px;">
+
+    <div class="card-body" style=" border-radius: 30px;background-color: rgb(241, 238, 235); padding: 20px 30px;">
+      <img src='{{post.imageURL}}' width="350px" height="250px" alt="No Image">
+      <div style="margin-left:417px;display: block;margin-top: -260px;">
+          <h5 class="card-title">{{ post.title}}</h5>
+        <p class="date" style="font-style: italic; font-size:14px; margin-top: -42px;margin-bottom: 60px;">Published {{ post.publish }} by {{ post.author }}</p>
+        <p class="card-text" style="background-color: darkgrey; margin-top: 36px;">{{post.body|truncatewords:20|linebreaks }}</p>
+        <a href="{{	post.get_absolute_url	}}" class="btn btn-primary">Read</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% include "blog/pagination.html" with page=posts %}
+
+{% endblock %}
+
+<!-- <img src='/static/media/{{post.image}}' -->

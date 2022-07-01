@@ -1,0 +1,53 @@
+{% extends "blog/base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+{% load static %}
+<div style="border-radius: 2px 70px 70px 2px;">
+<div class="detailImg">
+<img src="{{post.imageURL}}" width="400" height="305" alt="...">
+</div>
+<h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:18px;margin-left:415px;margin-top: -250px;">{{ post.title }}</h1>
+<p class="date" style="margin-top:-16px;font-style:italic;margin-bottom: 96px; margin:18px;margin-left:415px;margin-bottom: 200px">
+	Published {{ post.publish }} by {{ post.author }}
+</p> <!-- Main Para-->
+<div style="font-size: 19px;text-align: justify; margin:18px;margin-bottom: 80px; margin-top: 80px;">
+	{{ post.body|linebreaks }}
+</div>
+
+<div class="comment-section">
+	<!-- Comment Section-->
+	{% with comments.count as total_comments %}
+	<h2
+		style="margin-bottom:33px;font-size: 32px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+		{{ total_comments }} comment{{ total_comments|pluralize }}
+	</h2>
+	{% endwith %}
+
+	{% for comment in comments %}
+	<div class="comment"
+		style=" margin:5px;display: block; width: 35%;border-radius: 4px;padding: 8px; background-color: rgb(147 255 186);">
+		<p class="info" style="color: rgb(72 72 72); font-weight: bold; margin-top: 15px;">
+			Comment {{ forloop.counter }} by {{ comment.name }}
+			{{ comment.created }}
+		</p>
+		{{ comment.body|linebreaks }}
+	</div>
+</div>
+{% empty %}
+<p>There are no comments yet.</p>
+{% endfor %}
+
+{% if new_comment %}
+<h2>Your comment has been added.</h2>
+{% else %}
+<h2>Add a new comment</h2>
+<form name="form1" action="." method="post" autocomplete="off">
+	{{ comment_form.as_p }}
+	{% csrf_token %}
+	<p><input class="addcom" type="submit" value="Add Comment"></p>
+</form>
+
+{% endif %}
+</div>
+{% endblock %}

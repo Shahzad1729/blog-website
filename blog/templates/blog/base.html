@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Spectral:wght@200&display=swap" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        body {
+            font-weight: bold;
+            font-family: 'Spectral', serif;
+            background-color:rgb(248, 244, 241);
+
+        }
+        h1{
+            margin-top: 0;
+            font-family: 'Courgette', cursive;
+        }
+
+        .navbar {
+            margin-top: -8px;
+            padding: 1px;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 5px 7px;
+
+        }
+
+        .navbar li a:hover {
+            background: rgb(219, 181, 154);
+
+        }
+
+        .navbar ul {
+            padding-left: 530px;
+            overflow: auto;
+            position: relative;
+        }
+
+        .navbar li a {
+            font-family: "calibri";
+            text-decoration: none;
+            border-radius: 5px;
+            color: black;
+            padding: 5px;
+            margin: 5px;
+        }
+        .secondary-header{
+            background-color: rgb(219, 181, 154);
+        }
+
+        .footer {
+            background-color: rgb(219, 181, 154);
+            margin-top: 32px;
+            color: rgb(48, 46, 46);
+            text-align: center;
+            font-family: Calibri;
+            font-weight: bold;
+            padding: 17px;
+        }
+
+        .footer p {
+            margin: auto;
+        }
+
+        .card-title:hover {
+
+            color: rgb(219, 181, 154);
+        }
+
+        .card-title  {
+            text-align: justify;
+            font-size: 28px;
+            font-weight: bold;
+            font-family: 'Segoe UI Black';
+            color: black;
+            margin-top: 4px;
+        }
+        .btn,
+        .btn-primary {
+            text-decoration: none;
+            background-color: rgb(219, 181, 154);
+            color: whitesmoke;
+            padding: 8px 36px;
+            border-radius: 12px;
+        }
+
+        .btn:hover {
+            background: #f66b5d;
+        }
+
+        .addcom {
+            color: black;
+            background-color: rgb(219, 181, 154);
+            padding: 3px;
+            border-radius: 4px;
+        }
+
+        .addcom:hover {
+            background: #f66b5d;
+        }
+        .detailImg{
+            margin-top: 10px;
+        }
+        #id_name, #id_email{
+            padding: 6px;
+            background-color:#d9f7de;
+            margin-top: 15px;
+            border:2px solid slategrey;
+        }
+        #id_body{
+            background-color:rgb(230, 236, 219);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <script>
+                        document.write('<a href="' + document.referrer + '">Home</a>');
+                    </script>
+                    <!-- <a href='post/list'>Home</a></li> -->
+                <li><a href='blog/about'>About</a></li>
+                <li><a href="blog/contact">Contact us</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <div class="secondary-header">
+            <h1 style="color: rgb(48, 46, 46);font-size:23px;font-family:Calibri;margin-right:26px;padding: 25px ;text-align: center;">Smart Blogger</h1>
+    </div>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer>
+        <div class="footer">
+            <p>www.smartblogger.com</p>
+            <p>All rights reserved &copy; 2022</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

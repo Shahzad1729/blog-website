@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        body {
+            background-color:rgb(248, 244, 241);
+            padding-top: 10vh;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Ubuntu', sans-serif;
+            width: 80vw;
+            height: 80vh;
+            margin: auto;
+            color: rgb(89, 86, 86);
+        }
+        h2{
+            font-size: 30px;
+   
+        }
+        hr{
+            width: 70%;
+        }
+        h4{
+            font-size: 20px;
+        }
+        .contact-blocks {
+            display: flex;
+            height: 90%;
+            color: rgb(75, 72, 72);
+        }
+        
+        .outer-cover-cust {
+            border: 1px solid bl;
+        }
+        
+        .customer-care{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: auto;
+            height: 80%;
+            border-radius: 25px;
+        }
+        
+
+        .customer-care {
+            width: 300px;
+            border: 1px #4737d3 solid;
+            margin: 25px;
+            box-shadow: 0 -10px 5px #4737d3;
+        }
+        
+        .customer-care h3 {
+            padding-top: 25px;
+            text-align: center;
+        }
+        
+        .customer-care p {
+            padding-bottom: 40px;
+            text-align: center;
+           margin-top: 60px;
+          font-weight: bold;
+          color: #1734c3;
+
+        }
+        
+        button {
+            font-size: 15px;
+            border-radius: 25px;
+            padding: 10px 35px;
+            border: 0;
+            margin: 5px;
+        }
+        
+        .customer-care button{
+            background: #4737d3 ;
+            color: rgb(232, 228, 228);
+        }
+                
+        .customer-care button:hover{
+            color: rgb(139, 134, 134);
+        }
+                
+        .customer-care a {
+            padding-top: 20px;
+            text-decoration: none;
+            font-weight:900;
+            color: #4737d3;
+        }
+        .customer-care a:hover { 
+            color: #7972b5; 
+        }
+        @media screen and (max-width:760px) {
+            body{
+                padding-top: 0;
+
+            }
+            .contact-blocks{
+                flex-direction: column;
+            }
+        }
+        .typeAnim {
+            overflow: hidden;
+            border-right: .15em light whitesmoke;
+            white-space: nowrap;
+            animation:
+                typing 1.2s forwards;
+            width: 0;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container typeAnim">
+        <h2>Contact Us</h2>
+        <hr>
+        <h4>Have any suggestions? I'd love to hear from you</h4>
+        <div class="contact-blocks">
+            <div class="customer-care">
+                <h3>Email</h3>
+                <p>shahzadsayyed1729@gmail.com</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
