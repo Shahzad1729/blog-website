@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-pb37y31s1zbgr+hbur#nc*3122%!s3t*npl63f3&)xd5b!l&b4
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
-ALLOWED_HOSTS = ["localhost","127.0.0.1:8000","smartblogs.herokuapp.com"]
+DEBUG = False
+ALLOWED_HOSTS = ["localhost","127.0.0.1:8000","smartbloggers.herokuapp.com"]
 
 
 # Application definition
